@@ -8,9 +8,8 @@ services:
     ports:
       - "${PORT:-3064}:${PORT:-3064}"
     environment:
-      - GHOST_URL=${GHOST_URL}
-      - GHOST_KEY_ID=${GHOST_KEY_ID}
-      - GHOST_KEY_SECRET=${GHOST_KEY_SECRET}
+      - GHOST_API_URL=${GHOST_API_URL}
+      - GHOST_ADMIN_KEY=${GHOST_ADMIN_KEY}
       - PORT=${PORT:-3064}
       - NODE_ENV=production
     restart: unless-stopped
